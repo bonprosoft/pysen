@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     timeout-minutes: 15
     container:
-      image: quay.io/pysen/pysen-test@sha256:e6ecc68fda873bf269de16cbed734a627232b88cbdf7054c0520a31a57439738
+      image: quay.io/pysen/pysen-test@sha256:a37dbee9ecc51ee5240deb275001a459ec177eb4e7b3666ae00088db102c6b9d
     steps:
     - uses: actions/checkout@v2
       with:
