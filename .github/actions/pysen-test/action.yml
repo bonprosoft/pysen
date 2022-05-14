@@ -4,7 +4,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   pre-entrypoint: 'setup.bash'
-  entrypoint: '/bin/bash'
-  args:
-    - '-c'
-    - 'git status && git diff --abbrev=40 --full-index -M --raw -z --no-color'
+  entrypoint: 'run.bash'
