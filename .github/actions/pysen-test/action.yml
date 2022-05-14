@@ -3,6 +3,7 @@ description: 'Run pysen test'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  pre-entrypoint: 'setup.bash'
   entrypoint: '/bin/bash'
   args:
     - '-c'
