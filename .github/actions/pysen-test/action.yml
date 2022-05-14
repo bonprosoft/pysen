@@ -6,4 +6,4 @@ runs:
   entrypoint: '/bin/bash'
   args:
     - '-c'
-    - "git config --global --add safe.directory '*' && tox -e development"
+    - "chown -R $(id -u):$(id -g) . && tox -e development"
