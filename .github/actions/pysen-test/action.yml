@@ -7,7 +7,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  entrypoint: "bin/bash"
+  entrypoint: "/bin/bash"
   args:
     - "-c"
     - 'ls -la; tox --parallel'
