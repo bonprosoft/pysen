@@ -3,5 +3,7 @@ description: 'Run pysen test'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  pre-entrypoint: 'setup.bash'
-  entrypoint: 'run.bash'
+  entrypoint: '/bin/bash'
+  args:
+    - '-c'
+    - "git config --global --add safe.directory $(pwd) && git status && tox --parallel"
