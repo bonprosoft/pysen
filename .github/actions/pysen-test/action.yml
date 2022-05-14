@@ -6,4 +6,4 @@ runs:
   entrypoint: '/bin/bash'
   args:
     - '-c'
-    - "git config --global --add safe.directory $(pwd) && git status && tox --parallel"
+    - "git config --global --add safe.directory $(pwd) && tox --parallel"
