@@ -1,0 +1,10 @@
+name: 'pysen-test'
+description: 'Run pysen test'
+inputs:
+  path:
+    description: 'Path to codebase'
+    required: true
+runs:
+  using: 'docker'
+  image: '${{ inputs.path }}/assets/Dockerfile'
+  entrypoint: 'tox --parallel'
