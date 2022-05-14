@@ -6,4 +6,4 @@ runs:
   entrypoint: '/bin/bash'
   args:
     - '-c'
-    - "git config --global --add safe.directory $(pwd) && git diff --abbrev=40 --full-index -M --raw -z --no-color"
+    - "git config --global --add safe.directory $(pwd) && git diff --abbrev=40 --full-index -M --raw -z --no-color && tox -e development"
