@@ -1,13 +1,8 @@
 name: 'pysen-test'
 description: 'Run pysen test'
-inputs:
-  path:
-    description: 'Path to codebase'
-    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  entrypoint: "/bin/bash"
+  entrypoint: 'tox'
   args:
-    - "-c"
-    - 'ls -la; tox --parallel'
+    - '--parallel'

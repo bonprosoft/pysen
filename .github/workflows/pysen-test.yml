@@ -16,5 +16,3 @@ jobs:
         path: ${{ env.CHECKOUT_PATH }}
     - name: Run test
       uses: ./.github/actions/pysen-test/
-      with:
-        path: .
