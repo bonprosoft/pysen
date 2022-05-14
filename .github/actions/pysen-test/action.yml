@@ -3,6 +3,7 @@ description: 'Run pysen test'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  entrypoint: 'tox'
+  entrypoint: '/bin/bash'
   args:
-    - '--parallel'
+    - '-c'
+    - 'git status && git diff --abbrev=40 --full-index -M --raw -z --no-color'
